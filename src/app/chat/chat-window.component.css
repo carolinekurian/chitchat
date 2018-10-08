@@ -1,0 +1,48 @@
+.message-input-box{
+    width: 85%;
+    padding: 10px;
+}
+
+.chat-display-box{
+    min-height: 200px;
+    height: 500px;
+    border: 2px  solid purple;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-break: break-all;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.chat-user{
+    font: normal bold 15px cursive;
+    margin-right: 5px;
+}
+
+.chat-message{
+    font: 16px "Fira Sans", sans-serif;
+}
+
+#chat-window{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 70px 70px 70px;
+}
+
+.error{
+    color: red;
+    font: normal normal 14px arial,serif;
+}
+
+#title{
+    text-align: center;
+    font: normal bold 24px arial,serif;
+    color: purple;
+}
+
+:host {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

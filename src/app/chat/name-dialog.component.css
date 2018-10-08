@@ -1,0 +1,7 @@
+div.mat-dialog-actions{
+    justify-content: center;
+}
+
+:host {
+    text-align: center;
+}

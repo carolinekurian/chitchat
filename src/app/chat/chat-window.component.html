@@ -1,0 +1,22 @@
+<div id="title">ChitChat with {{name}}</div>
+
+<div id="chat-window">
+    <div *ngIf="isDefaultUser" class="error">Using Default User since Name was not provided</div>
+
+    <div class="chat-display-box">
+        <div *ngFor='let usermessage of messageHistory'>
+            <span class="chat-user" [style.color]="usermessage.user === 'Echobot' ? 'red' : 'purple'">{{usermessage.user}}:</span><span class="chat-message">{{usermessage.message}}</span>
+        </div>
+        <div></div>
+        <span #scroll></span>
+    </div>
+
+    <div>
+        <mat-form-field class="message-input-box">
+            <input matInput placeholder="Message" [(ngModel)]="message" (keydown.enter)="onSend()">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="onSend()">Send</button>
+    </div>
+    <span class="error" *ngIf="isEmptyMessage">Please enter a message!</span>
+</div>
