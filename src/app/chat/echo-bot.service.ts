@@ -7,18 +7,18 @@ const httpOptions = {
     headers: new HttpHeaders({
         'Content-type': 'application/json'
     })
-}
+};
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class EchoBotService{
+export class EchoBotService {
 
-    constructor(private http: HttpClient){}
+    constructor(private http: HttpClient) {}
     public botUrl: string = 'http://messages.getsandbox.com/messages';
 
-    public sendMessage (message: string): Observable<Message>{
+    public sendMessage (message: string): Observable<Message> {
 
         return this.http.post<Message>(this.botUrl, { message }, httpOptions);
     }

@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router';
 import { MatDialogModule, MatFormFieldModule, MatInputModule, MatButtonModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ChatLandingComponent } from './chat/chat-landing.component';
-import { NameDialog } from './chat/name-dialog.component';
+import { NameDialogComponent } from './chat/name-dialog.component';
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ChatWindowComponent } from './chat/chat-window.component';
@@ -16,13 +16,13 @@ const routes: Routes = [
   {path: 'chat', component: ChatWindowComponent},
   {path: '**', redirectTo: ''}
 
-]
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatLandingComponent,
-    NameDialog,
+    NameDialogComponent,
     ChatWindowComponent
   ],
   imports: [
@@ -38,7 +38,7 @@ const routes: Routes = [
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [NameDialog]
+  entryComponents: [NameDialogComponent]
 })
 export class AppModule { }
 
