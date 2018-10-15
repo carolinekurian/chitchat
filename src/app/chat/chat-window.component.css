@@ -6,7 +6,7 @@
 .chat-display-box{
     min-height: 200px;
     height: 500px;
-    border: 2px  solid purple;
+    border: 2px  solid #004677;
     overflow-y: auto;
     overflow-x: hidden;
     word-break: break-all;
@@ -38,7 +38,7 @@
 #title{
     text-align: center;
     font: normal bold 24px arial,serif;
-    color: purple;
+    color: #004677;
     margin-top: 20px;
 }
 

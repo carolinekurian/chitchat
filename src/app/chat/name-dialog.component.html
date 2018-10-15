@@ -1,9 +1,17 @@
-<h3 mat-dialog-title>Hello! What is your name?</h3>
-<div mat-dialog-content>
-    <mat-form-field appearance="outline">
-      <input matInput [(ngModel)]="name" cdkFocusInitial (keydown.enter)="onGo()" placeholder="Name">
-    </mat-form-field>
-</div>
-<div mat-dialog-actions>
-    <button mat-raised-button color="primary" (click)="onGo()">Go!</button>
-</div>
+<vdl-dialog-header>
+    <vdl-dialog-title>
+        Hello! What is your name?
+    </vdl-dialog-title>
+</vdl-dialog-header>
+
+<vdl-dialog-content>
+    <vdl-form-field>
+        <input vdlInput [(ngModel)]="name" cdkFocusInitial (keydown.enter)="onGo()" placeholder="Name">
+    </vdl-form-field>
+</vdl-dialog-content>
+
+<vdl-dialog-actions>
+    <vdl-button-bar>
+        <button vdl-primary-button (click)="onGo()">Go!</button>
+    </vdl-button-bar>
+</vdl-dialog-actions>

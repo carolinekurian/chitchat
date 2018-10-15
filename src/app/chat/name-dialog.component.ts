@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material';
+import { VdlDialogRef } from 'vdl-angular';
 
 @Component({
   selector: 'app-name-dialog',
@@ -10,7 +10,7 @@ export class NameDialogComponent {
 
     public name: string;
 
-    constructor(public dialogRef: MatDialogRef<NameDialogComponent>) {}
+    constructor(public dialogRef: VdlDialogRef<NameDialogComponent>) {}
 
     public onGo(): void {
         this.dialogRef.close(this.name);

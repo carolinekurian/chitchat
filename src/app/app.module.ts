@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MatDialogModule, MatFormFieldModule, MatInputModule, MatButtonModule } from '@angular/material';
+import { VdlDialogModule, VdlFormFieldModule, VdlInputModule, VdlButtonModule } from 'vdl-angular';
 
 import { AppComponent } from './app.component';
 import { ChatLandingComponent } from './chat/chat-landing.component';
@@ -28,13 +28,13 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    MatDialogModule,
     FormsModule,
-    MatFormFieldModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    VdlDialogModule,
+    VdlFormFieldModule,
+    VdlInputModule,
+    VdlButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
